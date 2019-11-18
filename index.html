@@ -1,24 +1,16 @@
 <!--
 Plant Track
-Your Name:
-Collaborators:
+Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
 -->
 <!DOCTYPE html>
 <html>
-<!--
-/* Copyright (c) 2017 MIT 6.813/6.831 course staff, all rights reserved.
- * Redistribution of original or derived work requires permission of course staff.
- */
--->
 
 <head>
 <meta charset="utf-8">
 <title>Plant Track</title>
 
 <!-- Load style sheets -->
-<link rel="stylesheet" href=
-  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="mainLayout.css">
 
 <!-- Use mobile-aware viewport -->
@@ -26,18 +18,63 @@ Collaborators:
   "width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Load any supplemental Javascript libraries here -->
-<script src=
-  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src=
-  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
-</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 </head>
-
 <body>
 
-<div class="container">
-
+<div class="container-fluid">
+    <div class="row">
+	<div class="col-md-12">
+	    <button type="button" id="homeBtn" class="btn btn-link btn-block">Plant Track</button>
+	    <button type="button" id="loginBtn" class="btn btn-lg">Account Login</button>
+	</div>
+    </div>
+    <div class="row">
+	<div class="col-md-9">
+	    <!-- Nav tabs -->
+	    <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+		<li class="nav-item">
+		    <a class="nav-link active" id="journal-tab" data-toggle="tab" href="#journal" role="tab" aria-controls="home" aria-selected="true">Journal</a>
+	     	</li>
+	     	<li class="nav-item">
+		    <a class="nav-link" id="schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="profile" aria-selected="false">Schedule</a>
+	     	</li>
+	     	<li class="nav-item">
+		    <a class="nav-link" id="community-tab" data-toggle="tab" href="#community" role="tab" aria-controls="messages" aria-selected="false">Community</a>
+	     	</li>
+	     	<li class="nav-item">
+		    <a class="nav-link" id="plantWiki-tab" data-toggle="tab" href="#plantWiki" role="tab" aria-controls="settings" aria-selected="false">Plant Wiki</a>
+	     	</li>
+	    </ul>
+	    
+	    <!-- Tab panes -->
+	    <div class="tab-content">
+	      <div class="tab-pane active" id="journal" role="tabpanel" aria-labelledby="journal-tab">
+		  <!--journal code here-->
+		  placeholder for journal
+	      </div>
+	      <div class="tab-pane" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+		  <!--schedule code here-->
+		  placeholder for schedule
+	      </div>
+	      <div class="tab-pane" id="community" role="tabpanel" aria-labelledby="community-tab">
+		  <!--community code here-->
+		  placeholder for community
+	      </div>
+	      <div class="tab-pane" id="plantWiki" role="tabpanel" aria-labelledby="plantWiki-tab">
+		  <!--plant wiki code here-->
+		  placeholder for wiki
+	      </div>
+	    </div>
+	</div>
+	<div class="col-md-3">
+	     
+	</div>
+    </div>
 </div> <!-- class="container" -->
 
 </body>

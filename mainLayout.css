@@ -1,9 +1,41 @@
-/* Copyright (c) 2017 MIT 6.813/6.831 course staff, all rights reserved.
- * Redistribution of original or derived work requires permission of course staff.
- */
+html,body {
+  height:100vh;  
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 50px;  
+}
+/*
+#wrapper {
+  height: 100%;
+  overflow: auto;
+}
+*/   
+.container .container-flex .row .col-md-12 { 
+    height: 100vh;
+    overflow: auto;  
+} 
+.col-md-9 {
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    height: 100vh;
+    overflow: auto;  
+}
 
-/* REMOVE ME - dashed lines and height for debugging */
-#mainColumn {
-  outline: 1px dashed orange;
-  height: 200px;
+.col-md-3 {
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    height: 100vh;
+    overflow: auto;  
+}
+#homeBtn{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loginBtn{
+display: flex;
+  align-items: center;
+  justify-content: center;
 }
