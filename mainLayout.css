@@ -58,6 +58,8 @@ html,body {
     width: 25%;
     height: 25%;
     justify-content:center;
+    background: yellowgreen;
+    border: 0px;
 }
 .sidebarElement{
     display: flex;
@@ -77,9 +79,60 @@ table {
 td {
   text-align: center;
   padding-right: 75px;
-  /* border-right: solid 1px #f00; */
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-
+select {
+  text-align: center;
+  border: 3px yellowgreen;
+  border-radius: 20px;
+  background-color: darkseagreen;
+  padding: 5px;
+  color: black;
+}
+input {
+  border-radius: 20px;
+}
+ul {
+  background-color: ivory;
+  border: 3px yellowgreen;
+  padding: 5px;
+  color: forestgreen;
+}
+.nav-link {
+  border: 3px yellowgreen;
+  color: forestgreen;
+  font-weight: bold;
+  font-size: 20px;
+}
 .journal {
   padding-right: 150px;
+}
+.journalHeader {
+  padding-right: 150px;
+  border-bottom: black solid 1px;
+}
+
+.journalBtn {
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    border: yellowgreen;
+    border-radius: 75px;
+    background-color: yellowgreen;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#summary {
+  border: 3px yellowgreen;
+  color: forestgreen;
+  text-align: center;
+  font-size: 40px;
+}
+
+#logo {
+  text-align: center;
+  padding-left: 100px;
 }

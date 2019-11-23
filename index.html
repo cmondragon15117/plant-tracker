@@ -5,382 +5,561 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Plant Track</title>
+  <meta charset="utf-8">
+  <title>
+    Plant Track
+    <a src="planttracklogo"></a>
+  </title>
 
-<!-- Load style sheets -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="mainLayout.css">
+  <!-- Load style sheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="mainLayout.css">
 
-<!-- Use mobile-aware viewport -->
-<meta name="viewport" content=
+  <!-- Use mobile-aware viewport -->
+  <meta name="viewport" content=
   "width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!-- Load any supplemental Javascript libraries here -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Load any supplemental Javascript libraries here -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body onload="onLoad()">
-<div class="headWrapper">
+  <div class="headWrapper">
     <div class="homeWrapper">
-        <button type="button" id="homeBtn" class="btn btn-link"></button>
+      <button type="button" id="homeBtn" class="btn btn-link"><img src="planttracklogo.png"  width="1000" height="200" id="logo"></button>
     </div>
     <div class="loginWrapper">
-        <button type="button" id="loginBtn" class="btn btn-primary">login</button>
+      <button type="button" id="loginBtn" class="btn btn-primary">login</button>
     </div>
-</div>
-<div class="container-fluid">
+  </div>
+  <div class="container-fluid">
     <div class="row">
-        <div class="col-md-9">
-    	    <!-- Nav tabs -->
-    	    <ul class="nav nav-tabs nav-fill" id="displayTabs" role="tablist">
-    		    <li class="nav-item">
-    		        <a class="nav-link active" id="journal-tab" data-toggle="tab" href="#journal" role="tab" aria-controls="journalControls" aria-selected="true">Journal</a>
-    	     	</li>
-    	     	<li class="nav-item">
-    		        <a class="nav-link" id="schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="scheduleControls" aria-selected="false">Schedule</a>
-    	     	</li>
-    	     	<li class="nav-item">
-    		        <a class="nav-link" id="community-tab" data-toggle="tab" href="#community" role="tab" aria-controls="communityControls" aria-selected="false">Community</a>
-    	     	</li>
-    	     	<li class="nav-item">
-    		        <a class="nav-link" id="plantWiki-tab" data-toggle="tab" href="#plantWiki" role="tab" aria-controls="plantWikiControls" aria-selected="false">Plant Wiki</a>
-    	     	</li>
-    	    </ul>
+      <div class="col-md-9">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-fill" id="displayTabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="journal-tab" data-toggle="tab" href="#journal" role="tab" aria-controls="journalControls" aria-selected="true">Journal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="schedule-tab" data-toggle="tab" href="#schedule" role="tab" aria-controls="scheduleControls" aria-selected="false">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="community-tab" data-toggle="tab" href="#community" role="tab" aria-controls="communityControls" aria-selected="false">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="plantWiki-tab" data-toggle="tab" href="#plantWiki" role="tab" aria-controls="plantWikiControls" aria-selected="false">Plant Wiki</a>
+          </li>
+        </ul>
 
-    	    <!-- Tab panes -->
-    	    <div class="tab-content" id="tabPanes">
-    	        <div class="tab-pane active" id="home" role="tabpanel">
-                    placeholder for homepage
-                </div>
-                <div class="tab-pane" id="journal" role="tabpanel" aria-labelledby="journal-tab">
-    		        <!--journal code here-->
-    		        placeholder for journal
-    	        </div>
-    	        <div class="tab-pane" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
-    	        	<!--schedule code here-->
-    	        	placeholder for schedule
-    	        </div>
-    	        <div class="tab-pane" id="community" role="tabpanel" aria-labelledby="community-tab">
-						<div class="container"  >
+        <!-- Tab panes -->
+        <div class="tab-content" id="tabPanes">
+          <div class="tab-pane active" id="home" role="tabpanel">
+            <!-- <img src="planttracklogo.png"  width="1225" height="500"> data-file-width="25" data-file-height="25">-->
 
-								<header>
-									<p>
-									  <div align="left">
-										  <a href="#" onclick="communityHelp()"><img alt="help" src="help.png"  width="25" height="25" data-file-width="25" data-file-height="25"></a>
-										<input type="text" placeholder="Search communities...">
-
-										<select>
-											<option value = "SortBy">Sort By...</option>
-										  <option value = "Alphabetical">Alphabetical</option>
-										  <option value = "Favorites">Favorites</option>
-										  <option value = "MostActive">Most Active</option>
-										  <option value = "LastVisited">Last Visited</option>
-										</select>
-									  </div>
-
-									  <div align="right"><a href="#" onclick="return false;">
-										  <img alt="create community" src="add.png"  width="25" height="25" data-file-width="25" data-file-height="25">
-										<font color = "blue">Create Community</font></a>
-									  </div>
-									</p>
-								  </header>
-
-
-								<div class="middle" style = "width: 100%; position: relative; " >
-
-								  <div class="container" style = "width: 100%; float: left; overflow: hidden;">
-									<main class="content" style = "height: 75vh; overflow-y: scroll; padding: 0 0 0 270px;">
-									  <div>
-										  <div align="left"><a href="#" onclick="return false;">
-											  <img alt="new post" src="add.png"  width="30" height="30" data-file-width="30" data-file-height="30">
-											<font color = "blue">Make new post</font></a>
-										  </div><br>
-									  </div>
-									  <div id = "crista_post">
-										  <p><img alt="Crista M." src="crista.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;"> <strong><a href="#" onclick="return false;"><font color="blue">Crista M.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Rose-Growers</u></font></a></p>
-										  <p style="padding-left: 10px;">Look at my white rose bush! I worked real hard watering it and cultivating the soil when it was a wee little starter.</p>
-										  <p><img alt="Curio" src="post3.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"> </p>
-										  <p>
-											<table style="table-layout: fixed; width: 100%; border: 1px solid;">
-
-												<td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
-												<td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
-											</table>
-										  </p>
-									  </div>
-									  <div id = "rosa_post">
-										<p><img alt="Rosa D." src="rosa.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;"> <strong><a href="#" onclick="return false;"><font color="blue">Rosa D.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Chicago-Trackers</u></font></a></p>
-										<p style="padding-left: 10px;">Found this strange shrub in Greek Town. What is it? It smelled quite lovely and had white buds growing from it. I took this picture right after it was raining, so I do apologize for the poor quality of my phone camera.</p>
-										<p><img alt="Curio" src="post1.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"> </p>
-										<p>
-										  <table style="table-layout: fixed; width: 100%; border: 1px solid;">
-
-											  <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
-											  <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
-										  </table>
-										</p>
-									  </div>
-									  <br>
-									  <div id = "alex_post">
-										  <p><img alt="Alex G." src="alex.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="blue">Alex G.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a></p>
-										  <p style="padding-left: 10px;">Look at this hoe.</p>
-										  <p><img alt="Curio" src="post2.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
-										  <p>
-											<table style="table-layout: fixed; width: 100%; border: 1px solid;">
-												<td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
-												<td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
-											</table>
-										  </p>
-									  </div>
-
-									  <div id = "jeremy_post">
-										  <p><img alt="Jeremy R." src="jeremy.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="blue">Jeremy R.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Announcements</u></font><a href="#" onclick="return false;"></a></p>
-										  <p style="padding-left: 10px;">Welcome to Plant Track Communities! Join a community based on specific interests. You may want to look into local garden clubs in your area. Love plant memes? Join <a href="#" onclick="return false;"><font color="blue"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a>! You can even make your own community and have other Plant Track users join them.</a></p>
-										  <p><img alt="Welcome to Communities" src="post4.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
-										  <p>
-											<table style="table-layout: fixed; width: 100%; border: 1px solid;">
-												<td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
-												<td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
-											</table>
-										  </p>
-									  </div>
-
-									</main><!-- .content -->
-								  </div><!-- .container-->
-
-								  <aside class="left-sidebar" style =
-								  "float: left; width: 250px; margin-left: -100%;
-								  position: relative; ">
-									<p><u><strong>Your Communities</strong></u></p>
-									<p id = "ChicagoTrackersSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Chicago-Trackers</font></a> <a href="#" onclick="chicagoTrackers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
-									<p id = "PlantHoesSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Plant-Hoes</font></a> <a href="#" onclick="plantHoes()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
-									<p id = "RoseGrowersSubscribed"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
-
-									<p><strong><u>Suggested</u></strong></p>
-									<p id = "RoseGrowersSubscribe"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img  alt="add" src="add.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
-								  </aside><!-- .left-sidebar -->
-
-								</div><!-- .middle-->
-							</div> <!-- class="container" -->
-    	        </div>
-                <div class="tab-pane" id="plantWiki" role="tabpanel" aria-labelledby="plantWiki-tab">
-
-<div class="container">
-
-		<header>
-			<h1><font face="Candara" color="green"><b>Plant Track Wiki</b></font> <a href="wikilogo.png" class="image">
-				<img alt="Wiki Logo.jpg" src="wikilogo.png"  width="100" height="100" data-file-width="100" data-file-height="100">
-			  </a></h1>
-			<div align="right"><input type="text" placeholder="Search Wiki..."></div>
-		  </header>
-
-		<h1 id="firstHeading" class="firstHeading" style = "border-bottom: thin solid">Pansies</h1>
-
-		<div class="middle" style = "width: 100%; position: relative;">
-
-			<div class="container" style = "	width: 100%; float: left; overflow: hidden;">
-			  <main class="content" style = "padding: 0 350px 0 0;">
-				  <p>The garden pansy is a type of large-flowered hybrid plant cultivated as a garden flower. It is derived by hybridization from several species in the section Melanium ("the pansies") of the genus Viola, particularly Viola tricolor, a wildflower of Europe and western Asia known as heartsease. Some of these hybrids are referred to as Viola × wittrockiana Gams ex Nauenb. & Buttler. For simplicity, the older name Viola tricolor var. hortensis is often used.</p>
-				  <p>The garden pansy flower is 5 to 8 centimetres (2 to 3 in) in diameter and has two slightly overlapping upper petals, two side petals, and a single bottom petal with a slight beard emanating from the flower's center. These petals are usually white or yellow, purplish, or blue. The plant may grow to 23 cm (9 in) in height, and prefers sun to varying degrees and well-draining soils.</p>
-				  <p>Pansies are beautiful garden flowers that are usually grown as annuals, although they are technically biennials. They are a member of the genus Viola, making them closely related to violets. The most popular pansy purchased at garden centers each spring is Viola × wittrockiana, a hybrid form with many cultivars. Pansies are cultivated in a wide range of colors, ranging from gold and orange to purple, violet, and blue. Some pansies have bi-colored petals that are reminiscent of faces. The flowers are about two to three inches (about 6 cm) in diameter.</p>
-				</main><!-- .content -->
-			</div><!-- .container-->
-
-			<aside class="right-sidebar" style = "
-			float: left;
-			width: 350px;
-			margin-left: -350px;
-			position: relative;">
-				<table class="infobox" style="text-align: left; width: 200px; font-size: 100%; border:1px solid;">
-					<tbody>
-					  <tr>
-					  <th colspan="2" style="text-align: center; background-color: rgb(180,250,180)">Pansy
-					  </th>
-					  </tr>
-
-					  <tr>
-						<td colspan="2" style="text-align: center">
-						<a href="pansies.jpg" class="image">
-						  <img alt="Pansy Flower.jpg" src="pansies.jpg"  width="220" height="190" data-file-width="575" data-file-height="599" style="border:1px solid black;">
-						</a>
-						</td>
-					  </tr>
-
-					  <tr>
-						<td>Lifespan:
-						</td>
-						<td><div style="display:inline" class="lifespan">XX</div>
-						</td>
-					  </tr>
-
-					  <tr>
-						<td>Habit:
-						</td>
-						<td><div style="display:inline" class="habit">XX</div>
-						</td>
-					  </tr>
-
-					  <tr>
-						<td>Exposure:
-						</td>
-						<td><div style="display:inline" class="exposure">XX</div>
-						</td>
-					  </tr>
-
-					  <tr>
-						<td>Water:
-						</td>
-						<td><div style="display:inline" class="water">XX</div>
-						</td>
-					  </tr>
-
-					  <tr>
-						<td>Zones:
-						</td>
-						<td><div style="display:inline" class="lifespan">XX</div>
-						</td>
-					  </tr>
-
-					</tbody>
-					</table>
-			</aside><!-- .right-sidebar -->
-
-		  </div><!-- .middle-->
-	</div> <!-- class="container" -->
-    	        </div>
-    	    </div>
-	    </div>
-	    <div class="col-md-3">
-	        <div class="sidebarElement">
-				Recent Activity and News
-			</div>
-			<p id = "recents"> </p>
-
-	        <div class="sidebarElement">
-                Tip of the day
+            <div id="summary">
+              <br>
+              Hello!
+              <br>
+              To get started create an account, then you can explore our different tools.
+              Use the Journal to log your plant’s progress.
+              The Schedule planner will help you get organized for your plant’s maintenance needs.
+              Join our Communities to help you get started.
+              And use our Plant Wiki to look up your plant’s different needs.
             </div>
-	    </div>
+          </div>
+          <div class="tab-pane" id="journal" role="tabpanel" aria-labelledby="journal-tab">
+            <!--journal code here-->
+            <br>
+
+            <!-- journal buttons -->
+            <table>
+              <td>
+                <!-- <button type="button" name="button" class="journalBtn">?</button> -->
+                <a href="#" onclick="journalHelp()"><img alt="help" src="help.png"  width="25" height="25" data-file-width="25" data-file-height="25"></a>
+              </td>
+              <td>
+                <input type="text" placeholder="Search journal entries...">
+              </td>
+              <td>
+                <select>
+                  <option value = "SortBy">Sort By...</option>
+                  <option value = "Alphabetical">Alphabetical</option>
+                  <option value = "Favorites">Favorites</option>
+                  <option value = "MostActive">Most Active</option>
+                  <option value = "LastVisited">Last Visited</option>
+                </select>
+              </td>
+              <td>
+                <a href="#" onclick="return false;">
+                  <img alt="create entry" src="add.png"  width="25" height="25" data-file-width="25" data-file-height="25">
+                  <font color = "forestgreen">Create Entry</font></a>
+                </td>
+
+              </table>
+
+              <!-- journal entries -->
+              <table>
+                <tr>
+                  <td class="journalHeader">
+                    Name
+                  </td>
+                  <td class="journalHeader">
+                    Species
+                  </td>
+                  <td class="journalHeader">
+                    Log Data
+                  </td>
+                  <td class="journalHeader">
+                    Status
+                  </td>
+                  <td class="journalHeader">
+                    Timeline
+                  </td>
+                </tr>
+                <br><br>
+                <tr>
+                  <td class="journal">
+                    Charles
+                  </td>
+                  <td class="journal">
+                    Rosebush
+                  </td>
+                  <td class="journal">
+                    09/20/2019
+                  </td>
+                  <td class="journal">
+                    Mature
+                  </td>
+                  <td class="journal">
+                    Coming soon!
+                  </td>
+                </tr>
+                <tr>
+                  <td class="journal">
+                    Rosy
+                  </td>
+                  <td class="journal">
+                    Rosebush
+                  </td>
+                  <td class="journal">
+                    02/18/2018
+                  </td>
+                  <td class="journal">
+                    Dying
+                  </td>
+                  <td class="journal">
+                    ...
+                  </td>
+                </tr>
+                <tr>
+                  <td class="journal">
+                    Daze
+                  </td>
+                  <td class="journal">
+                    Daisy
+                  </td>
+                  <td class="journal">
+                    09/12/2019
+                  </td>
+                  <td class="journal">
+                    Seedling
+                  </td>
+                  <td class="journal">
+                    ...
+                  </td>
+                </tr>
+                <tr>
+                  <td class="journal">
+                    Gingy
+                  </td>
+                  <td class="journal">
+                    Ginger
+                  </td>
+                  <td class="journal">
+                    09/2/2019
+                  </td>
+                  <td class="journal">
+                    Seedling
+                  </td>
+                  <td class="journal">
+                    ...
+                  </td>
+                </tr>
+                <tr>
+                  <td class="journal">
+                    Rosa
+                  </td>
+                  <td class="journal">
+                    Rosebush
+                  </td>
+                  <td class="journal">
+                    03/18/2019
+                  </td>
+                  <td class="journal">
+                    Seedling
+                  </td>
+                  <td class="journal">
+                    ...
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="tab-pane" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+              <script type="text/javascript">
+                var table = document.createElement('table');
+                var tr = document.createElement('tr');
+                var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                for(var i = 0; i < 7; i++) {
+                  var td = document.createElement('td');
+                  var text = document.createTextNode(weekdays[i]);
+                  td.appendChild(text);
+                  tr.appendChild(td);
+                }
+                table.appendChild(tr);
+                var counter = 27;
+                for (var i = 0; i < 5; i++){
+                  var tr1 = document.createElement('tr');
+                  for(var i = 0; i < 7; i++) {
+                    if(counter == 32) {
+                      counter = 1;
+                    }
+                    var td1 = document.createElement('td');
+                    var text1 = document.createTextNode(counter.toString());
+                    td1.appendChild(text1);
+                    tr.appendChild(td1);
+                    counter++;
+                  }
+                  table.appendChild(tr);
+                }
+
+                document.body.appendChild(table);
+              </script>
+            </div>
+            <div class="tab-pane" id="community" role="tabpanel" aria-labelledby="community-tab">
+              <div class="container"  >
+
+                <header>
+                  <p>
+                    <div align="left">
+                      <a href="#" onclick="communityHelp()"><img alt="help" src="help.png"  width="25" height="25" data-file-width="25" data-file-height="25"></a>
+                      <input type="text" placeholder="Search communities...">
+
+                      <select>
+                        <option value = "SortBy">Sort By...</option>
+                        <option value = "Alphabetical">Alphabetical</option>
+                        <option value = "Favorites">Favorites</option>
+                        <option value = "MostActive">Most Active</option>
+                        <option value = "LastVisited">Last Visited</option>
+                      </select>
+                    </div>
+
+                    <div align="right"><a href="#" onclick="return false;">
+                      <img alt="create community" src="add.png"  width="25" height="25" data-file-width="25" data-file-height="25">
+                      <font color = "forestgreen">Create Community</font></a>
+                    </div>
+                  </p>
+                </header>
+
+
+                <div class="middle" style = "width: 100%; position: relative; " >
+
+                  <div class="container" style = "width: 100%; float: left; overflow: hidden;">
+                    <main class="content" style = "height: 75vh; overflow-y: scroll; padding: 0 0 0 270px;">
+                      <div>
+                        <div align="left"><a href="#" onclick="return false;">
+                          <img alt="new post" src="add.png"  width="30" height="30" data-file-width="30" data-file-height="30">
+                          <font color = "forestgreen">Make new post</font></a>
+                        </div><br>
+                      </div>
+                      <div id = "crista_post">
+                        <p><img alt="Crista M." src="crista.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;"> <strong><a href="#" onclick="return false;"><font color="forestgreen">Crista M.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Rose-Growers</u></font></a></p>
+                        <p style="padding-left: 10px;">Look at my white rose bush! I worked real hard watering it and cultivating the soil when it was a wee little starter.</p>
+                        <p><img alt="Curio" src="post3.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"> </p>
+                        <p>
+                          <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+
+                            <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                            <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                          </table>
+                        </p>
+                      </div>
+                      <div id = "rosa_post">
+                        <p><img alt="Rosa D." src="rosa.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;"> <strong><a href="#" onclick="return false;"><font color="forestgreen">Rosa D.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Chicago-Trackers</u></font></a></p>
+                        <p style="padding-left: 10px;">Found this strange shrub in Greek Town. What is it? It smelled quite lovely and had white buds growing from it. I took this picture right after it was raining, so I do apologize for the poor quality of my phone camera.</p>
+                        <p><img alt="Curio" src="post1.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"> </p>
+                        <p>
+                          <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+
+                            <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                            <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                          </table>
+                        </p>
+                      </div>
+                      <br>
+                      <div id = "alex_post">
+                        <p><img alt="Alex G." src="alex.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="forestgreen">Alex G.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a></p>
+                        <p style="padding-left: 10px;">Look at this hoe.</p>
+                        <p><img alt="Curio" src="post2.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
+                        <p>
+                          <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+                            <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                            <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                          </table>
+                        </p>
+                      </div>
+
+                      <div id = "jeremy_post">
+                        <p><img alt="Jeremy R." src="jeremy.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="forestgreen">Jeremy R.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Announcements</u></font><a href="#" onclick="return false;"></a></p>
+                        <p style="padding-left: 10px;">Welcome to Plant Track Communities! Join a community based on specific interests. You may want to look into local garden clubs in your area. Love plant memes? Join <a href="#" onclick="return false;"><font color="forestgreen"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a>! You can even make your own community and have other Plant Track users join them.</a></p>
+                        <p><img alt="Welcome to Communities" src="post4.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
+                        <p>
+                          <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+                            <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                            <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                          </table>
+                        </p>
+                      </div>
+
+                    </main><!-- .content -->
+                  </div><!-- .container-->
+
+                  <aside class="left-sidebar" style =
+                  "float: left; width: 250px; margin-left: -100%;
+                  position: relative; ">
+                  <p><u><strong>Your Communities</strong></u></p>
+                  <p id = "ChicagoTrackersSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Chicago-Trackers</font></a> <a href="#" onclick="chicagoTrackers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+                  <p id = "PlantHoesSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Plant-Hoes</font></a> <a href="#" onclick="plantHoes()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+                  <p id = "RoseGrowersSubscribed"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+
+                  <p><strong><u>Suggested</u></strong></p>
+                  <p id = "RoseGrowersSubscribe"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img  alt="add" src="add.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+                </aside><!-- .left-sidebar -->
+
+              </div><!-- .middle-->
+            </div> <!-- class="container" -->
+          </div>
+          <div class="tab-pane" id="plantWiki" role="tabpanel" aria-labelledby="plantWiki-tab">
+
+            <div class="container">
+
+              <header>
+                <h1><font face="Candara" color="green" font-size="80%"><b>Plant Track Wiki</b></font> <a href="wikilogo.png" class="image">
+                  <img alt="Wiki Logo.jpg" src="wikilogo.png"  width="100" height="100" data-file-width="100" data-file-height="100">
+                </a></h1>
+                <div align="right"><input type="text" placeholder="Search Wiki..."></div>
+              </header>
+
+              <h1 id="firstHeading" class="firstHeading" style = "border-bottom: thin solid">Pansies</h1>
+
+              <div class="middle" style = "width: 100%; position: relative;">
+
+                <div class="container" style = "	width: 100%; float: left; overflow: hidden;">
+                  <main class="content" style = "padding: 0 350px 0 0;">
+                    <p>The garden pansy is a type of large-flowered hybrid plant cultivated as a garden flower. It is derived by hybridization from several species in the section Melanium ("the pansies") of the genus Viola, particularly Viola tricolor, a wildflower of Europe and western Asia known as heartsease. Some of these hybrids are referred to as Viola × wittrockiana Gams ex Nauenb. & Buttler. For simplicity, the older name Viola tricolor var. hortensis is often used.</p>
+                    <p>The garden pansy flower is 5 to 8 centimetres (2 to 3 in) in diameter and has two slightly overlapping upper petals, two side petals, and a single bottom petal with a slight beard emanating from the flower's center. These petals are usually white or yellow, purplish, or forestgreen. The plant may grow to 23 cm (9 in) in height, and prefers sun to varying degrees and well-draining soils.</p>
+                    <p>Pansies are beautiful garden flowers that are usually grown as annuals, although they are technically biennials. They are a member of the genus Viola, making them closely related to violets. The most popular pansy purchased at garden centers each spring is Viola × wittrockiana, a hybrid form with many cultivars. Pansies are cultivated in a wide range of colors, ranging from gold and orange to purple, violet, and forestgreen. Some pansies have bi-colored petals that are reminiscent of faces. The flowers are about two to three inches (about 6 cm) in diameter.</p>
+                  </main><!-- .content -->
+                </div><!-- .container-->
+
+                <aside class="right-sidebar" style = "
+                float: left;
+                width: 350px;
+                margin-left: -350px;
+                position: relative;">
+                <table class="infobox" style="text-align: left; width: 200px; font-size: 100%; border:1px solid;">
+                  <tbody>
+                    <tr>
+                      <th colspan="2" style="text-align: center; background-color: rgb(180,250,180)">Pansy
+                      </th>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2" style="text-align: center">
+                        <a href="pansies.jpg" class="image">
+                          <img alt="Pansy Flower.jpg" src="pansies.jpg"  width="220" height="190" data-file-width="575" data-file-height="599" style="border:1px solid black;">
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Lifespan:
+                      </td>
+                      <td><div style="display:inline" class="lifespan">XX</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Habit:
+                      </td>
+                      <td><div style="display:inline" class="habit">XX</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Exposure:
+                      </td>
+                      <td><div style="display:inline" class="exposure">XX</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Water:
+                      </td>
+                      <td><div style="display:inline" class="water">XX</div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Zones:
+                      </td>
+                      <td><div style="display:inline" class="lifespan">XX</div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </aside><!-- .right-sidebar -->
+
+            </div><!-- .middle-->
+          </div> <!-- class="container" -->
+        </div>
+      </div>
     </div>
+    <div class="col-md-3">
+      <div class="sidebarElement">
+        Recent Activity and News
+      </div>
+      <p id = "recents"> </p>
+
+      <div class="sidebarElement">
+        Tip of the day
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
 <script>
-    $('#homeBtn').on('click', function(event){
-        console.log('pressed');
-        $('#tabPanes').children().each(function(obj, div){
-            $('#' + div.id).removeClass('active')
-        })
-        $('#displayTabs').children().each(function(obj, div){
-            $('#' + div.firstElementChild.id).removeClass('active')
-        })
-        $("#home").addClass('active')
-	});
+  $('#homeBtn').on('click', function(event){
+    console.log('pressed');
+    $('#tabPanes').children().each(function(obj, div){
+      $('#' + div.id).removeClass('active')
+    })
+    $('#displayTabs').children().each(function(obj, div){
+      $('#' + div.firstElementChild.id).removeClass('active')
+    })
+    $("#home").addClass('active')
+  });
 
 
-	var isSubscribedToPlantHoes = true;
+  var isSubscribedToPlantHoes = true;
   var isSubscribedToChicagoTrackers = true;
   var isSubscribedToRoseGrowers = true;
 
-function plantHoes()
-{
+  function plantHoes()
+  {
     //User is subscribed but clicked the remove button
     if (isSubscribedToPlantHoes == true)
-  {
-    if (confirm("Unsubscribe from #Chicago-Trackers?"))
     {
-    document.getElementById("alex_post").style.display = 'none';
+      if (confirm("Unsubscribe from #Chicago-Trackers?"))
+      {
+        document.getElementById("alex_post").style.display = 'none';
 
-    document.getElementById("PlantHoesSubscribed").style.display = 'none';
-	document.getElementById("recents").innerHTML = "Unsubscribed from #Plant-Hoes";
-	document.getElementById("PlantHoesSubscribe").style.display = '';
-    isSubscribedToPlantHoes = false;
-    }
-  }//end if (isSubscribedToChicagoTrackers == true)
-}//end function plantHoes()
+        document.getElementById("PlantHoesSubscribed").style.display = 'none';
+        document.getElementById("recents").innerHTML = "Unsubscribed from #Plant-Hoes";
+        document.getElementById("PlantHoesSubscribe").style.display = '';
+        isSubscribedToPlantHoes = false;
+      }
+    }//end if (isSubscribedToChicagoTrackers == true)
+  }//end function plantHoes()
 
-function chicagoTrackers()
-{
-  //User is subscribed but clicked the remove button
-  if (isSubscribedToChicagoTrackers == true)
+  function chicagoTrackers()
   {
-    if (confirm("Unsubscribe from #Chicago-Trackers?"))
+    //User is subscribed but clicked the remove button
+    if (isSubscribedToChicagoTrackers == true)
     {
-    document.getElementById("rosa_post").style.display = 'none';
+      if (confirm("Unsubscribe from #Chicago-Trackers?"))
+      {
+        document.getElementById("rosa_post").style.display = 'none';
 
-	document.getElementById("recents").innerHTML = "Unsubscribed from #Chicago-Trackers";
-    document.getElementById("ChicagoTrackersSubscribed").style.display = 'none';
-    document.getElementById("ChicagoTrackersSubscribe").style.display = '';
-	isSubscribedToChicagoTrackers = false;
-    }
-  }//end if (isSubscribedToChicagoTrackers == true)
-}//end function chicagoTrackers()
+        document.getElementById("recents").innerHTML = "Unsubscribed from #Chicago-Trackers";
+        document.getElementById("ChicagoTrackersSubscribed").style.display = 'none';
+        document.getElementById("ChicagoTrackersSubscribe").style.display = '';
+        isSubscribedToChicagoTrackers = false;
+      }
+    }//end if (isSubscribedToChicagoTrackers == true)
+  }//end function chicagoTrackers()
 
-function roseGrowers()
-{
-  //User is subscribed but clicked the remove button
-  if (isSubscribedToRoseGrowers == true)
+  function roseGrowers()
   {
-    if (confirm("Unsubscribe from #Rose-Growers?"))
+    //User is subscribed but clicked the remove button
+    if (isSubscribedToRoseGrowers == true)
     {
-    document.getElementById("crista_post").style.display = 'none';
+      if (confirm("Unsubscribe from #Rose-Growers?"))
+      {
+        document.getElementById("crista_post").style.display = 'none';
 
-    document.getElementById("RoseGrowersSubscribed").style.display = 'none';
-	document.getElementById("RoseGrowersSubscribe").style.display = '';
-	document.getElementById("recents").innerHTML = "Unsubscribed from #Rose-Growers";
-    isSubscribedToRoseGrowers = false;
+        document.getElementById("RoseGrowersSubscribed").style.display = 'none';
+        document.getElementById("RoseGrowersSubscribe").style.display = '';
+        document.getElementById("recents").innerHTML = "Unsubscribed from #Rose-Growers";
+        isSubscribedToRoseGrowers = false;
+      }
+    }//end if (isSubscribedToRoseGrowers == true)
+
+    //User is not yet subscribed and clicked the add button
+    else
+    {
+      if (confirm("Subscribe to #Rose-Growers?"))
+      {
+        document.getElementById("crista_post").style.display = '';
+        document.getElementById("RoseGrowersSubscribed").style.display = '';
+        document.getElementById("RoseGrowersSubscribe").style.display = 'none';
+        isSubscribedToRoseGrowers = true;
+        document.getElementById("recents").innerHTML = "Subscribed to #Rose-Growers";
+      }
     }
-  }//end if (isSubscribedToRoseGrowers == true)
+  }//end function roseGrowers()
 
-  //User is not yet subscribed and clicked the add button
-  else
+  function onLoad()
   {
-    if (confirm("Subscribe to #Rose-Growers?"))
+    if (isSubscribedToRoseGrowers == true)
+    {
+      document.getElementById("crista_post").style.display = 'none';
+
+      document.getElementById("RoseGrowersSubscribed").style.display = 'none';
+      document.getElementById("RoseGrowersSubscribe").style.display = '';
+      isSubscribedToRoseGrowers = false;
+    }//end if (isSubscribedToRoseGrowers == true)
+
+    else
     {
       document.getElementById("crista_post").style.display = '';
       document.getElementById("RoseGrowersSubscribed").style.display = '';
       document.getElementById("RoseGrowersSubscribe").style.display = 'none';
-	  isSubscribedToRoseGrowers = true;
-	document.getElementById("recents").innerHTML = "Subscribed to #Rose-Growers";
+      isSubscribedToRoseGrowers = true;
     }
   }
-}//end function roseGrowers()
 
-function onLoad()
-{
-  if (isSubscribedToRoseGrowers == true)
+  function addCommunity(elementID)
   {
-    document.getElementById("crista_post").style.display = 'none';
 
-    document.getElementById("RoseGrowersSubscribed").style.display = 'none';
-    document.getElementById("RoseGrowersSubscribe").style.display = '';
-    isSubscribedToRoseGrowers = false;
-  }//end if (isSubscribedToRoseGrowers == true)
+  }//end function addCommunity(elementID)
 
-  else
+  function removeCommunity(elementID)
   {
-    document.getElementById("crista_post").style.display = '';
-    document.getElementById("RoseGrowersSubscribed").style.display = '';
-    document.getElementById("RoseGrowersSubscribe").style.display = 'none';
-    isSubscribedToRoseGrowers = true;
+
+  }//end function addCommunity(elementID)
+
+  function communityHelp()
+  {
+    alert("Welcome to Plant Track Communities! Here you can see what other Plant Trackers are up to. Join communities based on specific interests and have posts curated for you.");
+  }//end function communityHelp()
+
+  function journalHelp() {
+    alert("Welcome to the Plant Track Journal! Here you can see your journal. This is where plant entries are kept. Add entries to keep track of all your plants!");
   }
-}
-
-function addCommunity(elementID)
-{
-
-}//end function addCommunity(elementID)
-
-function removeCommunity(elementID)
-{
-
-}//end function addCommunity(elementID)
-
-function communityHelp()
-{
-  alert("Welcome to Plant Track Communities! Here you can see what other Plant Trackers are up to. Join communities based on specific interests and have posts curated for you.");
-}//end function communityHelp()
 </script>
 </html>
