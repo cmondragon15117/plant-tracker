@@ -14,7 +14,7 @@ html,body {
 .col-md-9 {
     border: 1px solid black;
     background: white;
-    text-align: center;
+    text-align: left;
     height: 100vh;
     overflow: auto;  
 }
