@@ -1,25 +1,26 @@
 html,body {
-  height:100vh;  
+  height:100vh;
   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 50px;  
+  padding-top: 50px;
+  background: ivory;
 }
 /*
 #wrapper {
   height: 100%;
   overflow: auto;
 }
-*/   
-.container .container-flex .row .col-md-12 { 
+*/
+.container .container-flex .row .col-md-12 {
     height: 100vh;
-    overflow: auto;  
-} 
+    overflow: auto;
+}
 .col-md-9 {
     border: 1px solid black;
     background: white;
     text-align: center;
     height: 100vh;
-    overflow: auto;  
+    overflow: auto;
 }
 
 .col-md-3 {
@@ -27,15 +28,32 @@ html,body {
     background: white;
     text-align: center;
     height: 100vh;
-    overflow: auto;  
+    overflow: auto;
 }
 #homeBtn{
     display: flex;
   align-items: center;
   justify-content: center;
 }
+
 #loginBtn{
 display: flex;
   align-items: center;
   justify-content: center;
+}
+
+table {
+  padding: 50px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  padding-right: 75px;
+  /* border-right: solid 1px #f00; */
+}
+
+.journal {
+  padding-right: 150px;
 }
