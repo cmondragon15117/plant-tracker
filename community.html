@@ -1,0 +1,249 @@
+<!--
+Plant Track
+Your Name:
+Collaborators:
+-->
+<!DOCTYPE html>
+<html>
+<!--
+/* Copyright (c) 2017 MIT 6.813/6.831 course staff, all rights reserved.
+ * Redistribution of original or derived work requires permission of course staff.
+ */
+-->
+
+<head>
+<meta charset="utf-8">
+<title>Plant Track Community</title>
+
+<!-- Load style sheets -->
+<link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+<link rel="stylesheet" href="mainLayout.css">
+
+<!-- Use mobile-aware viewport -->
+<meta name="viewport" content=
+  "width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.2/seedrandom.js">
+</script>
+
+</head>
+
+<body onload="onLoad()">
+
+
+
+<div class="container"  >
+
+    <header>
+        <p>
+          <div align="left">
+              <a href="#" onclick="communityHelp()"><img alt="help" src="help.png"  width="25" height="25" data-file-width="25" data-file-height="25"></a>
+            <input type="text" placeholder="Search communities...">
+
+            <select>
+                <option value = "SortBy">Sort By...</option>
+              <option value = "Alphabetical">Alphabetical</option>
+              <option value = "Favorites">Favorites</option>
+              <option value = "MostActive">Most Active</option>
+              <option value = "LastVisited">Last Visited</option>
+            </select>
+          </div>
+
+          <div align="right"><a href="#" onclick="return false;">
+              <img alt="create community" src="add.png"  width="25" height="25" data-file-width="25" data-file-height="25">
+            <font color = "blue">Create Community</font></a>
+          </div>
+        </p>
+      </header>
+
+      
+	<div class="middle" style = "width: 100%; position: relative; " >
+
+      <div class="container" style = "width: 100%; float: left; overflow: hidden;">
+        <main class="content" style = "height: 75vh; overflow-y: scroll; padding: 0 0 0 270px;">
+          <div>
+              <div align="left"><a href="#" onclick="return false;">
+                  <img alt="new post" src="add.png"  width="30" height="30" data-file-width="30" data-file-height="30">
+                <font color = "blue">Make new post</font></a>
+              </div><br>
+          </div>
+          <div id = "crista_post">
+              <p><img alt="Crista M." src="crista.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;"> <strong><a href="#" onclick="return false;"><font color="blue">Crista M.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Rose-Growers</u></font></a></p>
+              <p style="padding-left: 10px;">Look at my white rose bush! I worked real hard watering it and cultivating the soil when it was a wee little starter.</p>
+              <p><img alt="Curio" src="post3.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"> </p>
+              <p>
+                <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+                  
+                    <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                    <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                </table> 
+              </p>
+          </div>
+          <div id = "rosa_post">
+            <p><img alt="Rosa D." src="rosa.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;"> <strong><a href="#" onclick="return false;"><font color="blue">Rosa D.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Chicago-Trackers</u></font></a></p>
+            <p style="padding-left: 10px;">Found this strange shrub in Greek Town. What is it? It smelled quite lovely and had white buds growing from it. I took this picture right after it was raining, so I do apologize for the poor quality of my phone camera.</p>
+            <p><img alt="Curio" src="post1.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"> </p>
+            <p>
+              <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+                
+                  <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                  <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+              </table> 
+            </p>
+          </div>
+          <br>
+          <div id = "alex_post">
+              <p><img alt="Alex G." src="alex.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="blue">Alex G.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a></p>
+              <p style="padding-left: 10px;">Look at this hoe.</p>
+              <p><img alt="Curio" src="post2.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
+              <p>
+                <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+                    <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                    <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                </table> 
+              </p>
+          </div>
+
+          <div id = "jeremy_post">
+              <p><img alt="Jeremy R." src="jeremy.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="blue">Jeremy R.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="blue"><u>#Announcements</u></font><a href="#" onclick="return false;"></a></p>
+              <p style="padding-left: 10px;">Welcome to Plant Track Communities! Join a community based on specific interests. You may want to look into local garden clubs in your area. Love plant memes? Join <a href="#" onclick="return false;"><font color="blue"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a>! You can even make your own community and have other Plant Track users join them.</a></p>
+              <p><img alt="Welcome to Communities" src="post4.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
+              <p>
+                <table style="table-layout: fixed; width: 100%; border: 1px solid;">
+                    <td style ="width: 50%; " align = "center"><a href="#" onclick="return false;"><img alt="upvote" src="upvote.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Upvote</a></button></td>
+                    <td style ="width: 50%;"  align = "center"><a href="#" onclick="return false;"><img alt="comment" src="comment.png"  width="20" height="20" data-file-width="20" data-file-height="20"> Comment</a></button></td>
+                </table> 
+              </p>
+          </div>
+
+        </main><!-- .content -->
+      </div><!-- .container-->
+  
+      <aside class="left-sidebar" style =
+      "float: left; width: 250px; margin-left: -100%;
+      position: relative; ">
+        <p><u><strong>Your Communities</strong></u></p>
+        <p id = "ChicagoTrackersSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Chicago-Trackers</font></a> <a href="#" onclick="chicagoTrackers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+        <p id = "PlantHoesSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Plant-Hoes</font></a> <a href="#" onclick="plantHoes()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+        <p id = "RoseGrowersSubscribed"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+      
+        <p><strong><u>Suggested</u></strong></p>
+        <p id = "RoseGrowersSubscribe"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img  alt="add" src="add.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+      </aside><!-- .left-sidebar -->
+  
+    </div><!-- .middle-->
+</div> <!-- class="container" -->
+
+</body>
+
+<script>
+
+  var isSubscribedToPlantHoes = true;
+  var isSubscribedToChicagoTrackers = true;
+  var isSubscribedToRoseGrowers = true;
+
+function plantHoes()
+{
+    //User is subscribed but clicked the remove button
+    if (isSubscribedToPlantHoes == true)
+  {
+    if (confirm("Unsubscribe from #Chicago-Trackers?"))
+    {
+    document.getElementById("alex_post").style.display = 'none';
+    
+    document.getElementById("PlantHoesSubscribed").style.display = 'none';
+    document.getElementById("PlantHoesSubscribe").style.display = '';
+    isSubscribedToPlantHoes = false;
+    }
+  }//end if (isSubscribedToChicagoTrackers == true)
+}//end function plantHoes()
+
+function chicagoTrackers()
+{
+  //User is subscribed but clicked the remove button
+  if (isSubscribedToChicagoTrackers == true)
+  {
+    if (confirm("Unsubscribe from #Chicago-Trackers?"))
+    {
+    document.getElementById("rosa_post").style.display = 'none';
+    
+    document.getElementById("ChicagoTrackersSubscribed").style.display = 'none';
+    document.getElementById("ChicagoTrackersSubscribe").style.display = '';
+    isSubscribedToChicagoTrackers = false;
+    }
+  }//end if (isSubscribedToChicagoTrackers == true)
+}//end function chicagoTrackers()
+
+function roseGrowers()
+{
+  //User is subscribed but clicked the remove button
+  if (isSubscribedToRoseGrowers == true)
+  {
+    if (confirm("Unsubscribe from #Rose-Growers?"))
+    {
+    document.getElementById("crista_post").style.display = 'none';
+    
+    document.getElementById("RoseGrowersSubscribed").style.display = 'none';
+    document.getElementById("RoseGrowersSubscribe").style.display = '';
+    isSubscribedToRoseGrowers = false;
+    }
+  }//end if (isSubscribedToRoseGrowers == true)
+
+  //User is not yet subscribed and clicked the add button
+  else 
+  {
+    if (confirm("Subscribe to #Rose-Growers?"))
+    {
+      document.getElementById("crista_post").style.display = '';
+      document.getElementById("RoseGrowersSubscribed").style.display = '';
+      document.getElementById("RoseGrowersSubscribe").style.display = 'none';
+      isSubscribedToRoseGrowers = true;
+    }
+  }
+}//end function roseGrowers()
+
+function onLoad()
+{
+  if (isSubscribedToRoseGrowers == true)
+  {
+    document.getElementById("crista_post").style.display = 'none';
+    
+    document.getElementById("RoseGrowersSubscribed").style.display = 'none';
+    document.getElementById("RoseGrowersSubscribe").style.display = '';
+    isSubscribedToRoseGrowers = false;
+  }//end if (isSubscribedToRoseGrowers == true)
+
+  else 
+  {
+    document.getElementById("crista_post").style.display = '';
+    document.getElementById("RoseGrowersSubscribed").style.display = '';
+    document.getElementById("RoseGrowersSubscribe").style.display = 'none';
+    isSubscribedToRoseGrowers = true;
+  }
+}
+
+function addCommunity(elementID)
+{
+  
+}//end function addCommunity(elementID)
+
+function removeCommunity(elementID)
+{
+  
+}//end function addCommunity(elementID)
+
+function communityHelp()
+{
+  alert("Welcome to Plant Track Communities! Here you can see what other Plant Trackers are up to. Join communities based on specific interests and have posts curated for you.");
+}//end function communityHelp()
+
+</script>
+
+</html>
+
