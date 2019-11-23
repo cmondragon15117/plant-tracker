@@ -107,10 +107,12 @@ ul {
 }
 .journal {
   padding-right: 150px;
+  font-size: 18px;
 }
 .journalHeader {
   padding-right: 150px;
   border-bottom: black solid 1px;
+  font-size: 24px;
 }
 
 .journalBtn {
@@ -135,4 +137,23 @@ ul {
 #logo {
   text-align: center;
   padding-left: 100px;
+}
+
+.schedule {
+  padding: 5px;
+  text-align: justify;
+  padding-right: 100px;
+}
+
+.title {
+  padding-right: 80px;
+  text-align: center;
+  font-size: 30px;
+  color: forestgreen;
+}
+.calendartable {
+  color: forestgreen;
+  padding-bottom: 25px;
+  font-size: 25px;
+  border: forestgreen 1px;
 }

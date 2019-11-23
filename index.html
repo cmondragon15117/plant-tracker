@@ -207,10 +207,18 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
               </table>
             </div>
             <div class="tab-pane" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+              <br>
+              <div class="title" style="font-weight: bold;">November 2019</div>
+              <a href="#" onclick="return false;" style="padding-left:1000px;">
+                <img alt="create entry" src="add.png"  width="25" height="25" data-file-width="25" data-file-height="25">
+                <font color = "forestgreen" >Create Entry</font></a>
+
+
               <script type="text/javascript">
+                var divForTable = document.getElementById("schedule");
                 var table = document.createElement('table');
                 var tr = document.createElement('tr');
-                var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                var weekdays = ['S', 'M', 'T', 'W', 'R', 'F', 'S'];
 
                 for(var i = 0; i < 7; i++) {
                   var td = document.createElement('td');
@@ -218,26 +226,76 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                   td.appendChild(text);
                   tr.appendChild(td);
                 }
-                table.appendChild(tr);
+                divForTable.appendChild(table);
+                var br = document.createElement('br');
+                divForTable.appendChild(br);
+
+
                 var counter = 27;
+                var table1 = document.createElement('table');
                 for (var i = 0; i < 5; i++){
                   var tr1 = document.createElement('tr');
-                  for(var i = 0; i < 7; i++) {
+                  //document.write(i.toString());
+                  for(var j = 0; j < 7; j++) {
                     if(counter == 32) {
                       counter = 1;
                     }
                     var td1 = document.createElement('td');
                     var text1 = document.createTextNode(counter.toString());
                     td1.appendChild(text1);
-                    tr.appendChild(td1);
+                    tr1.appendChild(td1);
                     counter++;
                   }
-                  table.appendChild(tr);
+                  table1.appendChild(tr);
                 }
 
-                document.body.appendChild(table);
+                divForTable.appendChild(table1);
+
               </script>
+              <script>
+                var calendar = document.getElementById('schedule');
+                var table    = document.createElement("table");                /*Create `table` element*/
+                var rows     = 5;
+                var cols     = 7;
+                var counter  = 27;
+                for (var i = 1; i <= rows; i++) {
+                  var tr = document.createElement("tr");                 /*Create `tr` element*/
+                  for (var j = 1; j <= cols; j++) {
+                    if(counter == 32) {
+                      counter = 1;
+                    }
+                    var td = document.createElement("td");             /*Create `td` element*/
+                    var cellText = document.createTextNode(counter);   /*Create text for `td` element*/
+                    ++counter;
+                    td.appendChild(cellText);                          /*Append text to `td` element*/
+                    tr.appendChild(td);                                /*Append `td` to `tr` element*/
+                  }
+                  table.appendChild(tr);                                 /*Append `tr` to `table` element*/
+                }
+                calendar.appendChild(table);
+              </script>
+              <br><br><br>
+              <div class="calendartable" style="border: 1px forestgreen; padding: 10px;">
+                <table>
+                  <tr>
+                    <td>Today</td>
+                    <td><ul>
+                      <li>Water daisies and rosebushes!</li>
+                    </ul></td>
+                  </tr>
+                  <tr>
+                    <td>This Week</td>
+                    <td><ul>
+                      <li>Water daisies and rosebushes today</li>
+                      <li>Feed rosebushes on Tuesday</li>
+                      <li>Water Rosa</li>
+                    </ul></td>
+                  </tr>
+                </table>
+              </div>
+
             </div>
+
             <div class="tab-pane" id="community" role="tabpanel" aria-labelledby="community-tab">
               <div class="container"  >
 
