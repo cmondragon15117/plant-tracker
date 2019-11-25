@@ -218,7 +218,7 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                 var divForTable = document.getElementById("schedule");
                 var table = document.createElement('table');
                 var tr = document.createElement('tr');
-                var weekdays = ['S', 'M', 'T', 'W', 'R', 'F', 'S'];
+                var weekdays = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
 
                 for(var i = 0; i < 7; i++) {
                   var td = document.createElement('td');
@@ -275,17 +275,19 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                 calendar.appendChild(table);
               </script>
               <br><br><br>
-              <div class="calendartable" style="border: 1px forestgreen; padding: 10px;">
+              <div class="calendartable" style="planttack: 1px forestgreen; padding: 10px;">
                 <table>
                   <tr>
                     <td>Today</td>
                     <td><ul>
+                      <br>
                       <li>Water daisies and rosebushes!</li>
                     </ul></td>
                   </tr>
                   <tr>
                     <td>This Week</td>
                     <td><ul>
+                      <br><br><br>
                       <li>Water daisies and rosebushes today</li>
                       <li>Feed rosebushes on Tuesday</li>
                       <li>Water Rosa</li>
@@ -306,7 +308,7 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                       <input type="text" placeholder="Search communities...">
 
                       <select>
-                        <option value = "SortBy">Sort By...</option>
+                        <option value = "SortBy">Sort By </option>
                         <option value = "Alphabetical">Alphabetical</option>
                         <option value = "Favorites">Favorites</option>
                         <option value = "MostActive">Most Active</option>
@@ -404,8 +406,10 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
             <div class="container">
 
               <header>
-                <h1><font face="Candara" color="green" font-size="80%"><b>Plant Track Wiki</b></font> <a href="wikilogo.png" class="image">
-                  <img alt="Wiki Logo.jpg" src="wikilogo.png"  width="100" height="100" data-file-width="100" data-file-height="100">
+                <h1>
+                  <font color="green" font-size="80%"><b>Plant Track Wiki</b></font>
+                  <a href="wikilogo.png" class="image">
+                  <img alt="Wiki Logo.jpg" src="wikilogo.png"  width="80" height="80" data-file-width="100" data-file-height="100">
                 </a></h1>
                 <div align="right"><input type="text" placeholder="Search Wiki..."></div>
               </header>
@@ -435,9 +439,9 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                     </tr>
 
                     <tr>
-                      <td colspan="2" style="text-align: center">
+                      <td colspan="2" style="text-align: center; padding:20px;">
                         <a href="pansies.jpg" class="image">
-                          <img alt="Pansy Flower.jpg" src="pansies.jpg"  width="220" height="190" data-file-width="575" data-file-height="599" style="border:1px solid black;">
+                          <img alt="Pansy Flower.jpg" src="pansies.jpg"  width="220" height="190" data-file-width="575" data-file-height="599" style="border:1px solid black; text-align:center;">
                         </a>
                       </td>
                     </tr>
@@ -445,35 +449,35 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                     <tr>
                       <td>Lifespan:
                       </td>
-                      <td><div style="display:inline" class="lifespan">XX</div>
+                      <td><div style="display:inline" class="lifespan">2 years</div>
                       </td>
                     </tr>
 
                     <tr>
-                      <td>Habit:
+                      <td>Habitat:
                       </td>
-                      <td><div style="display:inline" class="habit">XX</div>
+                      <td><div style="display:inline" class="habit">Acidic soil</div>
                       </td>
                     </tr>
 
                     <tr>
-                      <td>Exposure:
+                      <td>Sun Exposure:
                       </td>
-                      <td><div style="display:inline" class="exposure">XX</div>
+                      <td><div style="display:inline" class="exposure">Direct</div>
                       </td>
                     </tr>
 
                     <tr>
                       <td>Water:
                       </td>
-                      <td><div style="display:inline" class="water">XX</div>
+                      <td><div style="display:inline" class="water">Allow soil to dry</div>
                       </td>
                     </tr>
 
                     <tr>
                       <td>Zones:
                       </td>
-                      <td><div style="display:inline" class="lifespan">XX</div>
+                      <td><div style="display:inline" class="lifespan">Western Europe</div>
                       </td>
                     </tr>
 

@@ -18,12 +18,14 @@ html,body {
 }
 
 .col-md-3 {
-    background: white;
+    background: yellowgreen;
     text-align: center;
     height: 100vh;
     overflow: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    opacity: 0.5;
 }
+
 .headWrapper{
     display:flex;
     width:100%;
@@ -45,7 +47,9 @@ html,body {
     height:100%;
     width: 25%;
     justify-content:flex-end;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    padding-right: 20px;
+    padding-top: 20px;
 }
 
 #loginBtn{
@@ -55,15 +59,19 @@ html,body {
     justify-content:center;
     align-items:center;
     background: yellowgreen;
-    border: 0px;
+    /* border: 0px; */
+
 }
 .sidebarElement{
     display: flex;
     width: 100%;
     height: 49%;
     justify-content:center;
-    text-decoration:underline;
-    color:#0056b3
+    /* text-decoration:underline; */
+    /* color:#0056b3; */
+    color: white;
+    font-weight: bold;
+    opacity: 1;
 }
 .tab-pane{
     display:flex;
@@ -77,9 +85,10 @@ table {
 
 td {
   text-align: center;
-  padding-right: 75px;
+  padding-right: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
+  color: teal;
 }
 select {
   text-align: center;
@@ -96,19 +105,21 @@ ul {
     background-color: ivory;
     border: 3px yellowgreen;
     padding: 5px;
-    color: forestgreen;
+    color: #346E0A;
     height:100%;
+    text-align: left;
 }
+
 .nav-link {
     border: 3px yellowgreen;
-    color: forestgreen;
+    color: #346E0A;
     font-weight: bold;
     font-size: 20px;
-    height:100%    
+    height:100%
 }
 .journal {
     padding-right: 150px;
-    font-size: 18px; 
+    font-size: 18px;
     height: 100%
 }
 .journalHeader {
@@ -131,7 +142,7 @@ ul {
 
 #summary {
   border: 3px yellowgreen;
-  color: forestgreen;
+  color: #346E0A;
   text-align: center;
   font-size: 40px;
 }
@@ -139,6 +150,8 @@ ul {
 #logo {
   text-align: center;
   padding-left: 100px;
+  width: 100%;
+  height: 150%;
 }
 
 .schedule {
@@ -152,11 +165,33 @@ ul {
   padding-right: 80px;
   text-align: center;
   font-size: 30px;
-  color: forestgreen;
+  color: #346E0A;
 }
 .calendartable {
-  color: forestgreen;
+  color: #346E0A;
   padding-bottom: 25px;
   font-size: 25px;
-  border: forestgreen 1px;
+  border: #346E0A 1px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: yellowgreen;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
