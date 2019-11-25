@@ -2,32 +2,27 @@ html,body {
   height:100vh;
   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 50px;
   background: ivory;
-
 }
 .container .container-flex .row {
-    height: 100vh;
+    height: 100%;
     overflow: auto;
 }
 .col-md-12{
-    border:2px solid blue;
-    height100vh;
+    height100%;
 }
 .col-md-9 {
-    border: 1px solid black;
     background: white;
     text-align: left;
-    height: 100vh;
-    overflow: auto;
+    height: 100%;
 }
 
 .col-md-3 {
-    border: 1px solid black;
     background: white;
     text-align: center;
     height: 100vh;
     overflow: auto;
+    border: 1px solid black;
 }
 .headWrapper{
     display:flex;
@@ -38,7 +33,6 @@ html,body {
     display:flex;
     width:75%;
     height:100%;
-    border: 2px solid black;
 }
 #homeBtn{
     display:flex;
@@ -51,6 +45,7 @@ html,body {
     height:100%;
     width: 25%;
     justify-content:flex-end;
+    border: 1px solid black;
 }
 
 #loginBtn{
@@ -58,18 +53,22 @@ html,body {
     width: 25%;
     height: 25%;
     justify-content:center;
+    align-items:center;
     background: yellowgreen;
     border: 0px;
 }
 .sidebarElement{
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 49%;
     justify-content:center;
     text-decoration:underline;
     color:#0056b3
 }
-
+.tab-pane{
+    display:flex;
+    height:100%;
+}
 table {
   padding: 50px;
   margin: 0 auto;
@@ -91,23 +90,26 @@ select {
   color: black;
 }
 input {
-  border-radius: 20px;
+    border-radius: 20px;
 }
 ul {
-  background-color: ivory;
-  border: 3px yellowgreen;
-  padding: 5px;
-  color: forestgreen;
+    background-color: ivory;
+    border: 3px yellowgreen;
+    padding: 5px;
+    color: forestgreen;
+    height:100%;
 }
 .nav-link {
-  border: 3px yellowgreen;
-  color: forestgreen;
-  font-weight: bold;
-  font-size: 20px;
+    border: 3px yellowgreen;
+    color: forestgreen;
+    font-weight: bold;
+    font-size: 20px;
+    height:100%    
 }
 .journal {
-  padding-right: 150px;
-  font-size: 18px;
+    padding-right: 150px;
+    font-size: 18px; 
+    height: 100%
 }
 .journalHeader {
   padding-right: 150px;
@@ -140,9 +142,10 @@ ul {
 }
 
 .schedule {
-  padding: 5px;
-  text-align: justify;
-  padding-right: 100px;
+    padding: 5px;
+    text-align: justify;
+    padding-right: 100px;
+    height:100%;
 }
 
 .title {
