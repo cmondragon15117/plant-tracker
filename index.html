@@ -8,7 +8,6 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
   <meta charset="utf-8">
   <title>
     Plant Track
-    <a src="planttracklogo"></a>
   </title>
 
   <!-- Load style sheets -->
@@ -360,8 +359,8 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                       </div>
                       <br>
                       <div id = "alex_post">
-                        <p><img alt="Alex G." src="alex.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="forestgreen">Alex G.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a></p>
-                        <p style="padding-left: 10px;">Look at this hoe.</p>
+                        <p><img alt="Alex G." src="alex.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="forestgreen">Alex G.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Plant-Memes</u></font><a href="#" onclick="return false;"></a></p>
+                        <p style="padding-left: 10px;">Look at this freshly made meme I made!</p>
                         <p><img alt="Curio" src="post2.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
                         <p>
                           <table style="table-layout: fixed; width: 100%; border: 1px solid;">
@@ -373,7 +372,7 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
 
                       <div id = "jeremy_post">
                         <p><img alt="Jeremy R." src="jeremy.png"  width="64" height="64" data-file-width="64" data-file-height="64" style="border:1px solid black;">  <strong><a href="#" onclick="return false;"><font color="forestgreen">Jeremy R.</font></a></strong> posted in <a href="#" onclick="return false;"><font color="forestgreen"><u>#Announcements</u></font><a href="#" onclick="return false;"></a></p>
-                        <p style="padding-left: 10px;">Welcome to Plant Track Communities! Join a community based on specific interests. You may want to look into local garden clubs in your area. Love plant memes? Join <a href="#" onclick="return false;"><font color="forestgreen"><u>#Plant-Hoes</u></font><a href="#" onclick="return false;"></a>! You can even make your own community and have other Plant Track users join them.</a></p>
+                        <p style="padding-left: 10px;">Welcome to Plant Track Communities! Join a community based on specific interests. You may want to look into local garden clubs in your area. Love plant memes? Join <a href="#" onclick="return false;"><font color="forestgreen"><u>#Plant-Memes</u></font><a href="#" onclick="return false;"></a>! You can even make your own community and have other Plant Track users join them.</a></p>
                         <p><img alt="Welcome to Communities" src="post4.png"   height="128"  data-file-height="128" style="border:1px solid black; width: 100%; max-width: 100%;"></p>
                         <p>
                           <table style="table-layout: fixed; width: 100%; border: 1px solid;">
@@ -391,7 +390,7 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
                   position: relative; ">
                   <p><u><strong>Your Communities</strong></u></p>
                   <p id = "ChicagoTrackersSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Chicago-Trackers</font></a> <a href="#" onclick="chicagoTrackers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
-                  <p id = "PlantHoesSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Plant-Hoes</font></a> <a href="#" onclick="plantHoes()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
+                  <p id = "PlantMemesSubscribed"><a href="#" onclick="return false;"><font color = "#546E7A">#Plant-Memes</font></a> <a href="#" onclick="plantMemes()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
                   <p id = "RoseGrowersSubscribed"><a href="#" onclick="return false"><font color = "#546E7A">#Rose-Growers</font></a> <a href="#" onclick="roseGrowers()"><img alt="remove" src="remove.png"  width="15" height="15" data-file-width="15" data-file-height="15"></a></p>
 
                   <p><strong><u>Suggested</u></strong></p>
@@ -517,26 +516,26 @@ Collaborators: Alex Guo, Crista Mondragon, Jeremy Robles
   });
 
 
-  var isSubscribedToPlantHoes = true;
+  var isSubscribedToPlantMemes = true;
   var isSubscribedToChicagoTrackers = true;
   var isSubscribedToRoseGrowers = true;
 
-  function plantHoes()
+  function plantMemes()
   {
     //User is subscribed but clicked the remove button
-    if (isSubscribedToPlantHoes == true)
+    if (isSubscribedToPlantMemes == true)
     {
       if (confirm("Unsubscribe from #Chicago-Trackers?"))
       {
         document.getElementById("alex_post").style.display = 'none';
 
-        document.getElementById("PlantHoesSubscribed").style.display = 'none';
-        document.getElementById("recents").innerHTML = "Unsubscribed from #Plant-Hoes";
-        document.getElementById("PlantHoesSubscribe").style.display = '';
-        isSubscribedToPlantHoes = false;
+        document.getElementById("PlantMemesSubscribed").style.display = 'none';
+        document.getElementById("recents").innerHTML = "Unsubscribed from #Plant-Memes";
+        document.getElementById("PlantMemesSubscribe").style.display = '';
+        isSubscribedToPlantMemes = false;
       }
     }//end if (isSubscribedToChicagoTrackers == true)
-  }//end function plantHoes()
+  }//end function plantMemes()
 
   function chicagoTrackers()
   {
